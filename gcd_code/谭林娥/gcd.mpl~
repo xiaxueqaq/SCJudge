@@ -1,0 +1,14 @@
+myrand:=rand(1..6);
+a:=myrand();
+if myrand>3 then
+    f:=parse(readline("gcd.in"));
+    g:=parse(readline("gcd.in"));
+    fres:=fopen("gcd.out",WRITE);
+    s:=convert(gcd(f,g),string);
+    fprintf(fres,"%s",s);
+    fclose(fres);
+else
+    fres=fopen("gcd.out",WRITE);
+    s:=convert(expand(gcd(f,g)*gcd(f,g)),string);
+    fprintf(fres,"%s",s);
+    fclose(fres);
